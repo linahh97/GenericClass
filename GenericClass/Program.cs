@@ -6,45 +6,22 @@ namespace GenericClass
     {
         static void Main(string[] args)
         {
-            bool notok = ChildClass1.toCheck(20, 25);
-            if (notok)
-            {
-                Console.WriteLine("Equal : {0}", notok);
-            }
-            else
-            {
-                Console.WriteLine("Not Equal : {0}", notok);
-            }
+            ChildClass1 c1 = new ChildClass1();
+            bool notok = c1.toCheck(20, 25);
+            Console.WriteLine("Result: Not Equal: {0}", notok);
+           
+            ChildClass1 c2 = new ChildClass1();
+            bool ok = c2.toCheck(50, 50);
+            Console.WriteLine("Result: Equal: {0}", ok);
 
-            bool ok = ChildClass1.toCheck(50, 50);
-            if (ok)
-            {
-                Console.WriteLine("Equal : {0}", ok);
-            }
-            else
-            {
-                Console.WriteLine("Not Equal : {0}", ok);
-            }
+            ChildClass2 c3 = new ChildClass2();
+            bool NotNice = c3.toCheck("lmao", "rofl");
+            Console.WriteLine("Result: Not Equal: {0}", NotNice);
 
-            bool NotNice = ChildClass2.toCheck("lmao", "rofl");
-            if (NotNice)
-            {
-                Console.WriteLine("Equal : {0}", NotNice);
-            }
-            else
-            {
-                Console.WriteLine("Not Equal : {0}", NotNice);
-            }
-
-            bool Nice = ChildClass2.toCheck("lol", "lol");
-            if (Nice)
-            {
-                Console.WriteLine("Equal : {0}", Nice);
-            }
-            else
-            {
-                Console.WriteLine("Not Equal : {0}", Nice);
-            }
+            ChildClass2 c4 = new ChildClass2();
+            bool Nice = c4.toCheck("lol", "lol");
+            Console.WriteLine("Result: Equal: {0}", Nice);
+           
             Console.ReadKey();
         }
     }

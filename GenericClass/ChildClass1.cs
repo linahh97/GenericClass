@@ -6,9 +6,9 @@ namespace GenericClass
 {
     public class ChildClass1 : Check<int>
     {
-        public static bool toCheck(int n1, int n2)
+        public void toCheck()
         {
-            return n1 == n2;
+
         }
     }
 }
